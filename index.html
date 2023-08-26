@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--CSS Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/coding.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/coding.png"
+    />
+
+    <!-- Animate CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Luis Moreno | Software Engineer</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <nav>
+      <h1>Software Portfolio</h1>
+      <ul class="navigation">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="burger-menu" id="burger-menu">
+        <ion-icon class="bars" name="menu-outline"></ion-icon>
+        <!-- <ion-icon class="times" name="close-outline"></ion-icon> -->
+      </button>
+    </nav>
+    
+    <div class="centered-content">
+      <h2><span id="typing-text"> </span></h2>
+    </div>
+  
+
+    <div class="container">
+        <!-- Hero Section -->
+      <section class="hero" id="about">
+       
+        <div class="bio">
+          <h2 class="bio-title">About Me</h2>
+          <p class="bio-text">
+            I am a Recent Graduate, experienced Programmer with 4 years in software design at university level and
+            1 year at professional level, development, and integration. Proficient in Python, C++, and Java.
+            Skilled in SDLC, Agile, Scrum, and Waterfall methodologies. Strong grasp of security, efficient code
+            reuse, and meticulous software design. Accomplished in secure application design, data protection,
+            and vulnerability assessment. A collaborative team player adept at working across functions. Well-
+            versed in IT trends, including Cloud Computing. Eager to contribute to your company's success
+            through innovative, secure, and efficient software development.
+          </p>
+        </div>
+      </section>
+
+      <!--GIF Section-->
+      <section class="gif-section">
+        <img
+          src="assets/images/code.gif"
+          alt="Your GIF"
+          loading="lazy"
+          class="centered-gif"
+        />
+      </section>
+
+      <!-- More about -->
+      <section class="more-about">
+        <h2>About Me Part 2</h2>
+        <p>
+          Software Developer Experience:
+          I mainly code in Python but know how to code in C++ and Java<br>
+          I have worked on many coding projects throughout my university years mainly in teamwork<br>
+          As well got to participate in my university Incubatorship program through AIRES where I got to showcase my skills and develop a device<br>
+          Fun facts:
+          Ive worked partime at little ceasers and Cinemark mainly making pizza<br>
+          I technically have 5 years of pizza making experience<br>
+          I love to watch anime, play video games, and tinker with anything i can get my hands on<br>
+          My favorite anime of all time is Naruto and Dragon ball
+        </p>
+      </section>
+
+    </div>
+
+    
+    <!-- Skills section -->
+    <section class="skills" id="skills">
+      <h2 class="skill-header">My Top Skills</h2>
+
+      <div class="skills-wrapper">
+        <div class="first-set animate__animated animate__pulse">
+          <img
+            src="assets/icons/python.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="assets/icons/java.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="assets/icons/c++.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="assets/icons/vs.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+        </div>
+
+        <div class="second-set animate__animated animate__pulse">
+          <img
+            src="assets/icons/icons8-html-5.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="assets/icons/icons8-css3.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="assets/icons/jupyter.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="assets/icons/intelij.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects section -->
+    <section class="projects" id="projects">
+      <h2 class="projects-title">Some of my Recent Projects</h2>
+      <div class="projects-container">
+        <div class="project-container project-card">
+          <img
+            src="assets/images/HeartDevice.png"
+            alt="heart-device"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">Building Heart Rhythm Classification Device for Human |
+            Python and Embedded System</h3>
+          <p class="project-details">
+            - Developed a heart arrhythmia detection device for my Senior Design Project in collaboration with the TAMIU Aires Incubatorship program.<br>
+            - Utilized machine learning, including Convolution Neural Networks and Decision Trees, to predict arrhythmias.<br>
+            - Integrated hardware components, including Raspberry Pi, AD8232 Sensor, MCP3008 ADC, and Raspberry Pi touchscreen.
+          </p>
+          <a href=" https://www.youtube.com/watch?v=sygftwgjDAM" target="_blank" class="project-link">Check it Out</a>
+        </div>
+        <div class="project-container project-card">
+          <img
+            src="assets/images/ddos.png"
+            alt="ddos-ids"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">Machine Learning Based-Detection on DDos Attacks for
+            IOT Systems | Python (presented at pathways)</h3>
+          <p class="project-details">
+            - Created machine learning models using various algorithms.<br>
+            - Addressed IoT security, focusing on DoS and DDoS attacks.<br>
+            - Implemented advanced ML techniques for an Intrusion Detection System (IDS).<br>
+            - Expertise in algorithms: SVM, XGBoost, Random Forest, and ANN.<br>
+            - Optimized system with feature selection and scaling.
+          </p>
+          <a href="https://drive.google.com/file/d/1z_SJ3I04sIyjwkHqoRl5ziLjp1cuADYC/view?usp=sharing" target="_blank" class="project-link">Check it Out</a>
+        </div>
+        <div class="project-container project-card">
+          <img
+            src="assets/images/hierarchical.png"
+            alt="hierarchical-inheritance"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">Hierarchical Inheritance Bank Account | Java</h3>
+          <p class="project-details">
+            - Created an inheritance hierarchy bank account that a bank can use to represent
+            customers bank accounts using object-oriented principles and coded in Java in IntelliJ.<br>
+            - Created classes that inherited from the superclass (base class) that had methods and
+            variables inherited from one class to another
+          </p>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section class="contact" id="contact">
+      <h2>Get In Touch With Me</h2>
+      <div class="contact-form-container">
+        <div class="contact-form">
+          <form action="https://formspree.io/f/xpzgdoqd" method="POST">
+            <div class="form-control">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="sender-name"
+                placeholder="Enter Your Name"
+                class="input-field"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="sender-email"
+                placeholder="Enter Your Email"
+                class="input-field"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                cols="60"
+                rows="10"
+                placeholder="Enter Your Message"
+                name="message"
+                class="input-field"
+                required
+              ></textarea>
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              id="submit-btn"
+              class="submit-btn"
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social accounts - Fixed to the right -->
+    <div class="socials">
+      <a href="https://www.facebook.com/profile.php?id=100008979723346" target="_blank"
+        ><img
+          src="assets/icons/facebook.gif"
+          alt="Twitter"
+          loading="lazy"
+          class="socicon"
+      /></a>
+      <a href="https://www.instagram.com/moreno3809/" target="_blank"
+        ><img
+          src="assets/icons/icons8-instagram.gif"
+          alt="Instagram"
+          loading="lazy"
+          class="socicon"
+      /></a>
+      <a href="https://www.linkedin.com/in/luis-moreno11/" target="_blank"
+        ><img
+          src="assets/icons/icons8-linkedin-circled.gif"
+          alt="Linkedin"
+          loading="lazy"
+          class="socicon"
+      /></a>
+      <a href="https://github.com/Luis-Morenoo" target="_blank"
+        ><img src="assets/icons/icons8-github.gif" alt="Github" class="socicon"
+      /></a>
+    </div>
+
+    <!-- Scroll to top -->
+    <i class="scroll-up" id="scroll-up"
+      ><img
+        src="assets/icons/icons8-upward-arrow.gif"
+        class="socicon up-arrow"
+        alt=""
+    /></i>
+
+    <!-- Footer section -->
+    <footer>
+      <p class="copy">&copy; Copyright 2023</p>
+      <p class="copy">
+        Built with &#x2661; by
+        <a href="https://www.linkedin.com/in/luis-moreno11/" target="_blank"
+          >Luis Moreno</a
+        >
+      </p>
+    </footer>
+
+    <!-- Website scripts -->
+    <script src="assets/js/app.js"></script>
+
+    <!-- Ion icons scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+  </body>
+</html>
