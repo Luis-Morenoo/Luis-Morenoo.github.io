@@ -129,6 +129,7 @@
     .sk-tags { display:flex; flex-wrap:wrap; gap:0.45rem; }
     .sk-tag { font-size:0.82rem; font-weight:500; color:var(--text); background:rgba(220,232,248,0.06); border:1px solid rgba(220,232,248,0.1); padding:0.3rem 0.72rem; border-radius:6px; }
     .sk-tag.learning { color:var(--green); background:rgba(0,255,136,0.06); border-color:rgba(0,255,136,0.2); }
+    .sk-tag.completed { color: #ffd700; background: rgba(255,215,0,0.06); border-color: rgba(255, 215,0,0.25)}
 
     #projects { background: var(--bg-2); }
     .proj-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:1.5rem; }
@@ -260,11 +261,11 @@
         <div class="currently-card">
           <p class="cur-label">// CURRENTLY</p>
           <ul class="cur-list">
-            <li>Actively job searching — IT, DevOps &amp; Entry-Level SRE roles in the Phoenix metro</li>
+            <li>Actively job searching — Junior SWE, IT, DevOps &amp; Entry-Level SRE roles in the Phoenix metro</li>
             <li>Studying CompTIA A+ Core 1 via Mike Meyers + Pocket Prep</li>
-            <li>Building Active Directory home lab (Windows Server 2022 + VirtualBox)</li>
             <li>Enrolled: MS Computer Science, Cybersecurity concentration @ ASU — Summer 2026</li>
-            <li>Building a Password Strength Checker in Java Spring Boot</li>
+            <li>Building VaultKeep — a secure Python password manager (FastAPI, MongoDB, AES-256-GCM)</li>
+            <li>Google AI Essentials — Completed ✓</li>
           </ul>
         </div>
       </div>
@@ -376,6 +377,12 @@
       <div class="sk-card">
         <p class="sk-cat">Certifications</p>
         <div class="sk-tags">
+          <span class="sk-tag completed">Google AI Essentials (Completed) ✓ </span>
+            <a href="https://coursera.org/verify/specialization/J15LY0URCZDU" 
+              target="_blank" 
+              style="font-family:var(--mono); font-size:0.72rem; color:var(--accent); display:inline-block; margin-bottom:0.5rem;">
+              View Certificate →
+            </a>
           <span class="sk-tag learning">CompTIA A+ (Studying)</span>
           <span class="sk-tag learning">Network+ (Planned)</span>
           <span class="sk-tag learning">Security+ (Planned)</span>
