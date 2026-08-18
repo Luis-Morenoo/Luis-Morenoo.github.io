@@ -166,6 +166,28 @@
     .fi { opacity:0; transform:translateY(24px); transition:opacity 0.65s ease,transform 0.65s ease; }
     .fi.on { opacity:1; transform:translateY(0); }
 
+    /* Hamburger menu — hidden on desktop, shown on mobile via media query below */
+    .burger { display:none; flex-direction:column; gap:5px; cursor:pointer; z-index:101; padding:6px; background:none; border:none; }
+    .burger span { width:24px; height:2px; background:var(--accent); border-radius:2px; transition:transform 0.3s, opacity 0.3s; }
+    .burger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .burger.open span:nth-child(2) { opacity:0; }
+    .burger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+
+    .loading-dot { display:inline-block; opacity:0.6; animation:blink 1.4s infinite; }
+
+    /* Scroll-to-top button — hidden until user scrolls down (see app.js) */
+    #scroll-up {
+      position:fixed; bottom:24px; right:24px; z-index:99;
+      width:44px; height:44px; border-radius:50%;
+      background:var(--accent); color:var(--bg); border:none;
+      font-size:1.1rem; cursor:pointer;
+      display:flex; align-items:center; justify-content:center;
+      opacity:0; pointer-events:none; transform:translateY(10px);
+      transition:opacity 0.3s, transform 0.3s;
+      box-shadow:0 4px 20px rgba(0,212,255,0.3);
+    }
+    #scroll-up.show { opacity:1; pointer-events:auto; transform:translateY(0); }
+
     @media(max-width:900px){
       .hero-inner { grid-template-columns:1fr; text-align:center; }
       .hero-badge { margin:0 auto 1.5rem; }
@@ -177,7 +199,19 @@
     }
     @media(max-width:640px){
       nav { padding:0 1.25rem; }
-      .nav-links li:not(:last-child) { display:none; }
+      .burger { display:flex; }
+      .nav-links {
+        position:fixed; top:var(--nav-h); left:0; right:0;
+        flex-direction:column; align-items:flex-start; gap:0;
+        background:rgba(7,16,31,0.97); backdrop-filter:blur(18px);
+        border-bottom:1px solid var(--border);
+        max-height:0; overflow:hidden; padding:0 1.25rem;
+        transition:max-height 0.3s ease;
+      }
+      .nav-links.show { max-height:400px; padding:1rem 1.25rem 1.5rem; }
+      .nav-links li { width:100%; padding:0.75rem 0; border-bottom:1px solid var(--border); }
+      .nav-links li:last-child { border-bottom:none; padding-top:1rem; }
+      #scroll-up { bottom:16px; right:16px; }
       .proj-grid,.skills-grid { grid-template-columns:1fr; }
       .hero-stats { gap:1.5rem; }
     }
@@ -188,10 +222,16 @@
 <!-- ─── PARTICLE CANVAS — position:fixed covers every section as you scroll ─── -->
 <canvas id="particles" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events:none;"></canvas>
 
+<!-- ─── SCROLL TO TOP (toggled visible via app.js on scroll) ─── -->
+<button id="scroll-up" aria-label="Scroll to top">↑</button>
+
 <!-- ─── NAV ─── -->
 <nav>
   <div class="nav-logo">LM<span>.</span></div>
-  <ul class="nav-links">
+  <div id="burger-menu" class="burger" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links-list">
+    <span></span><span></span><span></span>
+  </div>
+  <ul class="nav-links" id="nav-links-list">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -548,6 +588,8 @@
 <footer>
   <p>Built by <span class="ac">Luis Moreno</span> &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; <span style="opacity:0.45;">luis-morenoo.github.io</span> &nbsp;·&nbsp; <span style="opacity:0.45;">Chandler, AZ</span></p>
 </footer>
+
+<script src="assets/js/app.js"></script>
 
 <script>
   // Fade-in observer
